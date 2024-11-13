@@ -1,7 +1,7 @@
 import requests as rq
 url = 'https://raw.githubusercontent.com/adrianalite/datasets/main/BR_LQs_CD2022.csv.'
 resposta = rq.get(url)
-!pip install streamlit
+
 
 import streamlit as st
 st.title("Localização das comunidades quilombolas (2022)")
