@@ -1,0 +1,4 @@
+import streamlit as st
+st.title("Localização das comunidades quilombolas (2022)")
+x = st.slider('Selecione um número', 0,8441)
+df.head(x)
