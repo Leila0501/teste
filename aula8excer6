@@ -1,1 +1,3 @@
 import streamlit as st
+x = st.slider('Selecione um número', 0,8441)
+df.head(x)
