@@ -10,3 +10,4 @@ st.code("x=2021")
 st.latex(r''' a+a r^1+a r^2+a r^3 ''')
 
 st.slider('Selecione um número', 0,100)
+st.number_input('Selecione um número', 0,100)
