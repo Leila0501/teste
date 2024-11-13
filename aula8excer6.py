@@ -1,6 +1,7 @@
 import requests as rq
 url = 'https://raw.githubusercontent.com/adrianalite/datasets/main/BR_LQs_CD2022.csv.'
 resposta = rq.get(url)
+url1 = url.json()
 
 
 import streamlit as st
