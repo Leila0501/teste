@@ -1,7 +1,7 @@
 import requests as rq
 url = 'https://raw.githubusercontent.com/adrianalite/datasets/main/BR_LQs_CD2022.csv.'
 resposta = rq.get(url)
-url1 = url.json()
+
 
 
 import streamlit as st
@@ -12,3 +12,6 @@ df = pd.DataFrame(url1)
 
 x = st.slider('Selecione um número', 0,8441)
 df.head(x)
+
+
+df = pd.read_csv('/content/BR_LQs_CD2022i.csv')
