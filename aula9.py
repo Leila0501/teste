@@ -3,7 +3,7 @@ import pandas as pd
 
 df = pd.DataFrame({
     'nomeServidor': ['selecione','Adriana', 'Monica', 'Samara'],
-    'salario': [1200,300,5000]
+    'salario': ['selecione',1200,300,5000]
 })
 
 st.write("Criando uma tabela!")
