@@ -12,6 +12,9 @@ df.drop(columns=['Unnamed: 0'], inplace=True)
 list=['Lat_d', 'Long_d']
 df[list] = df[list].apply(pd.to_numeric, errors='coerce')
 
+numero = st.slider('Selecione um número de linhas a serem exibidas', min_value = 0, max_value = 100)
+st.write(df.head(numero))
+
 estados = df['NM_UF'].unique()
 estadoFiltro = st.selectbox('Selecione a UF', estados)
 dadosFiltrados = df[df['NM_UF'] == estadoFiltro]
@@ -27,7 +30,10 @@ st.write("A quantidade de comunidades quilombolas no Brasil é de " + str(Comuni
 
 st.header('Número de comunidades por UF') #apresenta o título do gráfico
 st.bar_chart(df['NM_UF'].value_counts()) #mostra o gráfico de barras com as quantidades por estado
+
+
 st.header('Os dez municípios com mais comunidades quilombolas')#apresenta o título do gráfico
-st.bar_chart(df['NM_MUNIC'].value_counts(ascending=False)[:10])#mostra o gráfico de barras com os 10 municípios com mais comunidades quilombolas
-numero = st.slider('Selecione um número de linhas a serem exibidas', min_value = 0, max_value = 100)
-st.write(df.head(numero))
+df_dezmunic = df['NM_MUNIC'].value_counts(ascending=False)[:10]
+st.bar_chart(df_dezmunic)
+
+
