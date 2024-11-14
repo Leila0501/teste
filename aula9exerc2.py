@@ -25,5 +25,7 @@ st.write("A quantidade de municípios no Brasil com comunidade quilombola é de 
 Comunidades = len(df['NM_AGLOM'].unique())
 st.write("A quantidade de comunidades quilombolas no Brasil é de " + str(Comunidades))
 
-st.header('Número de comunidades por UF')
-st.bar_chart(df['NM_UF'].value_counts())
+st.header('Número de comunidades por UF') #apresenta o título do gráfico
+st.bar_chart(df['NM_UF'].value_counts()) #mostra o gráfico de barras com as quantidades por estado
+st.header('Os dez municípios com mais comunidades quilombolas') #apresenta o título do gráfico
+st.bar_chart(df['NM_MUNIC'].value_counts()[:10]) #mostra o gráfico de barras com os 10 municípios com mais comunidades quilombolas
