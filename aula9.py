@@ -1,4 +1,4 @@
-import streamlit as st
+lecione',import streamlit as st
 import pandas as pd
 
 df = pd.DataFrame({
